@@ -1,7 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.header{
+    width: 100vw;
+}
+
+.header__nav{
+    width: 100%;
+    padding: 24px 34px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__input{
+    width: 522px;
+    border: 2px solid #141414;
+    border-radius: 32px;
+    padding: 15px;
+    outline: none;
+}
+
+.nav__btn{
+    padding: 18px 35px;
+    background-color: black;
+    color: white;
+    border-radius: 32px;
+
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 106%;
+    text-transform: uppercase;
+    color: #f9fafb;
+}
+
+.main{
+    width: 100vw;
+}
+
+.schedule{
+    width: 100%;
+    padding: 0 10%;
+    margin-top: 82px;
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule__hero{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.hero__texts{
+    width: 555px;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.texts__new{
+    width: 204px;
+    background-color: rgba(18, 18, 18, 0.05);
+    border-radius: 32px;
+    padding: 2px;
+}
+
+.texts__new > span{
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 32px;
+    background-color: black;
+    color: white;
+}
+
+.texts__desc{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 144%;
+    color: #141414; 
+    width: 450px;
+}
+
+.texts__title, .schedule__title{
+    font-weight: 400;
+    font-size: 103px;
+    line-height: 113%;
+    letter-spacing: 0em;
+    color: #141414;
+}
+
+.hero__tab{
+    width: 648px;
+}
+
+.schedule__title > span{
+    color: #f9fafb;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 5px black;
+}
+
+.schedule__form{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+
+    margin-bottom: 100px;
+}
+
+.inputs__title, .inputs__input, .form__btn{
+    padding: 30px 36px;
+}
+
+.form__inputs{
+    width: 70%;
+    display: flex;
+}
+
+.inputs__title{
+    width: 30%;
+    border: 2px solid #141414;
+    border-radius: 32px 0 0 32px;
+    border-bottom: 4px solid black;
+    border-right: 2px dashed #141414;
+    background-color: #e1e1e1;
+}
+
+.inputs__input{
+    width: 90%;
+    border: 2px solid #141414;
+    border-radius: 0 32px 32px 0;
+    border-bottom: 4px solid black;
+    border-left: none;
+}
+
+.form__btn{
+    border: 2px solid #141414;
+    border-bottom: 4px solid black;
+    border-radius: 32px;
+    background-color: white;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 110%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #141414;
+}
+
+@media screen and (max-width: 1400px) {
+    
+    .schedule__hero{
+        gap: 50px;
+    }
+
+    .schedule{
+        padding: 0 5%;
+    }
+
+    .hero__tab{
+        width: 550px;
+    }
+
+    .texts__title, .schedule__title{
+        font-size: 82px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .schedule__hero{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero__texts{
+        align-items: center;
+        text-align: center;
+    }
+
+    .texts__new > span{
+        padding: 8px 15px;
+    }
+
+    .hero__tab{
+        width: 600px;
+    }
+
+    .schedule{
+        align-items: center;
+    }
+
+    .schedule__form{
+        width: 90%;
+    }
+
+    .texts__title, .schedule__title{
+        font-size: 62px;
+    }
+
+    .schedule__title{
+        text-align: center;
+    }
+
+    .form__btn, .inputs__title{
+        font-size: 18px;
+        padding: 20px 25px;
+        text-align: center;
+    }
+
+    .form__inputs{
+        align-items: center;
+        width: 95%;
+    }
+
+    .inputs__title{
+        padding: 27px 30px;
+        width: fit-content;
+    }
+
+    .inputs__input{
+        width: 50%;
+    }
+
+    .hero__tab{
+        width: 500px;
+    }
+
+    .form__btn{
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .nav__input{
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    
+    .nav__logo{
+        font-size: 22px;
+    }
+
+    .nav__btn{
+        font-size: 12px;
+    }
+
+    .nav__input{
+        width: 100%;
+    }
+
+    .texts__desc{
+        font-size: 18px;
+    }
+
+    .texts__title, .schedule__title{
+        font-size: 42px;
+    }
+
+    .schedule__title > span{
+        -webkit-text-stroke: 2px black;
+    }
+
+    .schedule__title{
+        margin-top: 20px;
+    }
+
+    .hero__tab{
+        width: 270px;
+    }
+
+    .texts__desc{
+        width: 250px;
+        font-size: 16px;
+    }
+
+    .header__nav{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form__inputs{
+        width: 90%;
+    }
+
+    .inputs__input, .inputs__title{
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    .form__btn{
+        padding: 5px 20px;
+        font-size: 10px;
+    }
+
+    .hero__texts{
+        width: 90vw;
+    }
+
+    .schedule{
+        margin-top: 50px;
+    }
+
+    .schedule__form{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .form__inputs{
+        width: fit-content;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .schedule__title, .texts__title{
+        font-size: 32px;
+    }
+
 }
